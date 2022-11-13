@@ -17,9 +17,9 @@
 <style>
 p { line-height: 1.75;  }
 li { line-height: 1.75;  }
-table { line-height: 1.75; }
-table { margin: auto; }
-table { font-size: 90%; }
+table { line-height: 1.75; margin: auto; }
+.smalltable { font-size: 90%; border-collapse: collapse; }
+.bigtable { font-size: 120%; }
 /*h2 { background-color: #f2f2b0;}*/
 /* h3, h4 { background-color: #f8f4e6;} */
 .pagebreak { break-before: page; }
@@ -649,7 +649,7 @@ table { font-size: 90%; }
 			</p>
 			<div class="printfriendlyblock">
 				<p>
-				<table border="3" cellpadding="3">
+				<table border="1" class="smalltable" cellpadding="3">
 				<caption align="bottom">ヒトの器官と情報媒体</caption>
 				<tr><td rowspan="6">受容器官</td><td rowspan="4">特殊感覚</td><td>視覚</td><td>光</td></tr>
 				<tr><td>味覚</td><td>化学的物質</td></tr>
@@ -704,7 +704,7 @@ table { font-size: 90%; }
 
 			<div class="printfriendlyblock">
 			<p>
-				<table border="3" cellpadding="3">
+				<table border="1" class="smalltable" cellpadding="3">
 				<caption align="bottom">ヒトの器官と情報属性</caption>
 				<tr><td rowspan="6">受容器官</td><td rowspan="4">特殊感覚</td><td>視覚</td><td>遠隔</td></tr>
 				<tr><td>味覚</td><td>近接</td></tr>
@@ -737,7 +737,7 @@ table { font-size: 90%; }
 			</div>-->
 			<div class="printfriendlyblock">
 				<p>
-				<table border="3" cellpadding="3">
+				<table border="1" class="smalltable" cellpadding="3">
 				<caption align="bottom">ヒトの器官と中枢系との間の通信容量</caption>
 				<tr><td rowspan="7">受容器官</td><td></td><td></td><td align="right">1,000,000,000ビット/秒</td></tr>
 				<tr><td rowspan="4">特殊感覚</td><td>視覚</td><td align="right">100,000,000ビット/秒</td></tr>
@@ -920,7 +920,7 @@ table { font-size: 90%; }
 				</p>
 
 				<div class="printfriendlyblock">
-					<table border="3" cellpadding="3">
+					<table border="1" class="smalltable" cellpadding="3">
 						<caption align="bottom">視覚の高性能の仕組み</caption>
 						<tr>
 							<td rowspan="2">情報圧縮</td>
@@ -993,7 +993,7 @@ table { font-size: 90%; }
 					ヒトの視覚は、認知レベルでも効率化の仕組みを持っている。
 				</p>
 				<div class="printfriendlyblock">
-					<table border="3" cellpadding="3">
+					<table border="1" class="smalltable" cellpadding="3">
 						<caption align="bottom">認知レベルの効率化</caption>
 						<tr>
 							<td>
@@ -1061,7 +1061,7 @@ table { font-size: 90%; }
 					目の筋肉は、何種類かの運動によって、形態視、動体視、立体視、位置同定などの機能をはたしている
 					（<a href="#rFT">[rFT]</a>、<a href="#rSO">[rSO]</a>）。
 					<div class="printfriendlyblock">
-						<table border="3"  cellpadding="3">
+						<table border="1" class="smalltable" cellpadding="3">
 							<caption align="bottom">眼球の運動</caption>
 							<tr>
 								<td rowspan="2">
@@ -1219,7 +1219,7 @@ table { font-size: 90%; }
 					立体視の仕組みには、単眼によるものと両眼視によるものとがある。
 				</p>
 				<div class="printfriendlyblock">
-					<table border="3"  cellpadding="3">
+					<table border="1" class="smalltable" cellpadding="3">
 						<caption align="bottom">立体視のしくみ</caption>
 						<tr>
 							<td>
@@ -1862,7 +1862,7 @@ table { font-size: 90%; }
 			</p>
 
 			<div class="printfriendlyblock">
-				<table border="3" cellpadding="3">
+				<table border="1" class="smalltable" cellpadding="3">
 				<caption align="bottom">脳の構成</caption>
 				<tr>
 					<td rowspan="4">大脳</td>
@@ -3288,11 +3288,14 @@ table { font-size: 90%; }
 			<ul>
 				<li>
 					操作では、関係は一方向である。
-					それに対し、会話では関係は<strong>双方向</strong>である。
+					それに対し、会話では関係は双方向である。
 				</li>
 				<li>
 					ヒトは、ヒトに何かやってほしい時、そのやってほしいことを言う。
-					ヒトは、<strong>日常的な話し言葉で意図や目的を表現する</strong>。
+					ヒトは、日常的な話し言葉で<strong>意図</strong>を表現する。
+					意図は、コンピューターに構築された抽象的な概念階層とは無縁である。　
+				</li>
+				<li>
 					指示命令を一度伝えて、結果を待つのではない。
 					意図を伝えて反応を確認しながら働きかけることを、繰り返す。
 				</li>
@@ -3300,35 +3303,45 @@ table { font-size: 90%; }
 					人は、環境に対し五感を総合して身体で反応する。
 					意図も、身体を使って、口振り（発話）、目振り（注目）、身振り・手振り（ジェスチャー）、表情で表現する。
 					機械側は、それを受け止めるべきである。
-					これは、<strong>ヒトの生得的な身体能力を、あるがまま、インターフェイスにする</strong>ことである。
+					<strong>ヒトの生得的な身体能力を、あるがまま、インターフェイスにする</strong>。
 				</li>
 			</ul>
-			<div align="center">
-				<img width=80% src="relations.png"> 
-				<p>関係性</p>
+
+			<div class="printfriendlyblock">
+				<p>
+				<table border="5" class="bigtable" cellpadding="5">
+				<caption align="bottom">操作と会話関係</caption>
+				<tr><th></th><th>操作</th><th>会話</th></tr>
+				<tr><td>利用者</td><td>エリートやエンジニア</td><td>一般の人</td></tr>
+				<tr><td>用途</td><td>知能の拡張や情報処理</td><td>情報の流通、ライフライン</td></tr>
+				<tr><td>表現水準</td><td>コンピューターの抽象概念</td><td>ヒトの意図</td></tr>
+				<tr><td>交信形態</td><td>指示命令と結果</td><td>意思伝達と反応の繰り返し</td></tr>
+				<tr><td>活躍する生体機能</td><td>目と手</td><td>視聴覚、身体</td></tr>
+				</table>
 			</div>
 			<p>
-				それでは、コンピューターは、もっとハイテクでないといけないか？ 
+				会話の関係になるには、知的な機械がもっとハイテクでないといけないのか？ 
 				そうではない、すでに技術はある。
 			<p>
 				音声インターフェイスの普及が鍵である。
 				口振りに反応するとは、機械側がヒトの音声を認識することである。
 				ヒトの音声言語は、日常的なレベルで意図を表現する。
+			</p>
+			<p>
 				意図表現は、一見、曖昧に見える。
 				音声認識で、アプリが組めるのか?
 				組み方を変えればいいのである。
 				すでにある技術を、ちょっと視点を変えて、デザインをすればよい。
 			</p>
 			<p>
-				さらに、身振り、目ぶり、手振りに反応するとは？
-				ヒトの身振り、目ぶり、手振りは、発話とともに日常的な意図を表現する。
-				意図は、コンピューターに構築された抽象的な概念階層とは無縁である。　
-				それを捕捉するには、コンピューターに目と耳をつければよい。
+				さらに、身振り・目ぶり・手振りに反応するとは？
+				ヒトの身振り・目ぶり・手振りは、発話とともに意図を表現する。
+				それを捕捉するには、知的な機会に目と耳をつければよい。
 				PCもスマホも、カメラとマイクをすでに備えている。
-				モニター付きスマートスピーカーもある。
-				目と耳を持つ、サービスロボットあるいは会話ロボットも、出始めた。
+				モニター付きスマート・スピーカーもある。
+				目と耳を持つ、サービス・ロボットあるいはコミュニケーション・ロボットも、出始めた。
 				このように目と耳を持つハードは、すでにある。
-				また、掃除ロボットに目をつけて、ヒトがあっちを掃除してと指示することは、今でも簡単に実現できる。
+				また、掃除ロボットに目をつけて、ヒトがあっちを掃除してと指示することは、技術的に今でも実現できる。
 				あとはアプリのデザインである。
 			</p>
 
@@ -3340,9 +3353,8 @@ table { font-size: 90%; }
 		<details open><summary><strong>意図レベルのやりとり</strong></summary>
 
 			<p>
-				ヒトがコンピューターを手と目で操作するという関係でなく、機械と会話するという関係では、
-				音声が重要な役割を果たす。
-				機械は、すでに、ヒトに歩み寄り、音のままの言葉を理解し始めている。
+				ヒトが知的な機械と会話するという関係では、音声が重要な役割を果たす。
+				機械は、ヒトに歩み寄り、音のままの言葉を理解し始めている。
 				従来の道具とは、質的に異なる性質である。
 				音響言語の発生は、ヒトをヒトたらしめた。
 				機械が言葉でヒトのパートナーとなれば、この質的な変化は、
@@ -4408,6 +4420,15 @@ table { font-size: 90%; }
 		<div class="summary-bg">
 			<ul>
 				<li>
+					利用者と用途の広がりに即して、ヒトと知的な機会の関係は、操作から会話へと変わるのがふさわしい。
+					会話は、双方向の関係である。
+					会話では、日常的な話し言葉で、意図が伝達される。
+					そこでは意思伝達と反応が繰り返される。
+					機械は、ヒトの口振り（発話）、目振り（注目）、身振り・手振り（ジェスチャー）、表情に反応する。
+					ヒトの身体がインターフェイスとなる。
+				</li>
+				</li>
+					会話の関係に変化するために必要な技術はすでにある。
 				</li>
 			</ul>
 		</div>
